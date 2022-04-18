@@ -15,6 +15,12 @@ ANaveJugadorPlayerController::ANaveJugadorPlayerController()
 
 void ANaveJugadorPlayerController::SetupInputComponent()
 {
+	Super::SetupInputComponent();
+
+	EnableInput(this);
+
+	InputComponent->BindAxis("MoveHorizontal", this, &ANaveJugadorPlayerController::MoveHorizontal);
+
 }
 
 void ANaveJugadorPlayerController::BeginPlay()
