@@ -49,7 +49,12 @@ void ANaveJugador::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 void ANaveJugador::MoveHorizontal(float AxisValue)
 {
-	AddMovementInput(FVector(AxisValue, 0.0f, 0.0), 1.0f, false);
+	AddMovementInput(FVector(AxisValue, 0.0f, 0.0f), 1.0f, false);
 }
+void ANaveJugador::MoveVertical(float AxisValueY)
+{
+	AddMovementInput(FVector(0.0f, 0.0f, AxisValueY), 1.0f, false);
+}
+
 
 

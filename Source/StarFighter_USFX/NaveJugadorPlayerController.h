@@ -23,6 +23,7 @@ class STARFIGHTER_USFX_API ANaveJugadorPlayerController : public APlayerControll
 protected:
 	virtual void BeginPlay() override;
 	void MoveHorizontal(float AxisValue);
+	void MoveVertical(float AxisValuey);
 
 
 };

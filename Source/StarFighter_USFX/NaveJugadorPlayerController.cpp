@@ -20,6 +20,7 @@ void ANaveJugadorPlayerController::SetupInputComponent()
 	EnableInput(this);
 
 	InputComponent->BindAxis("MoveHorizontal", this, &ANaveJugadorPlayerController::MoveHorizontal);
+	InputComponent->BindAxis("MoveVertical", this, &ANaveJugadorPlayerController::MoveVertical);
 
 }
 
@@ -41,5 +42,16 @@ void ANaveJugadorPlayerController::MoveHorizontal(float AxisValue)
 
 	if (MyPawn) {
 		MyPawn-> MoveHorizontal(AxisValue);
+	}
+}
+
+
+void ANaveJugadorPlayerController::MoveVertical(float AxisValueY)
+{
+
+	auto MyPawn = Cast<ANaveJugador>(GetPawn());
+
+	if (MyPawn) {
+		MyPawn->MoveVertical(AxisValueY);
 	}
 }

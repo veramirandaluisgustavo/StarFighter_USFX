@@ -37,4 +37,5 @@ public:
 
 
 	virtual void MoveHorizontal(float AxisValue);
+	virtual void MoveVertical(float AxisValueY);
 };
